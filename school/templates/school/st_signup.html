@@ -1,3 +1,13 @@
+
+
+
+
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'school/style.css' %}" />
+
+
 <form action="" method="post">
     {% csrf_token %}
     {{ us_form.as_p }}

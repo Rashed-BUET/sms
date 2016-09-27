@@ -1,0 +1,84 @@
+p {
+	display: block;
+	overflow: hidden;
+	padding: 20px;
+	margin:0px;
+	
+}
+p label{
+	//color: #089E98;
+	display: block;
+	width: 150px;
+	float:left;
+}
+p input{
+	display: block;
+	width: 300px;
+	float: left;
+	
+}
+p span{
+	display: block;
+	font-size: 0px;
+}
+form{
+	display: block;
+	margin-left: 400px;
+	margin-top: 50px;
+}
+
+
+
+form input[type=submit]{
+
+	width: 200px;
+  margin-left: 150px;	
+}
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
