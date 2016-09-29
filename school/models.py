@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
-
 from django.db import models
 from django.contrib.auth.models import User
+
+
 
 class Student(models.Model):
 	user = models.OneToOneField(User, on_delete= models.CASCADE)
@@ -10,7 +11,11 @@ class Student(models.Model):
 	admission_year = models.IntegerField(default=2014)
 	blood_group = models.CharField(default='A+', max_length=10)
 	adress = models.CharField(default="Buet, Titumir Hall", max_length=200)
-	profile_pic = models.ImageField()
+	profile_pic = models.ImageField(upload_to='school/images')
+
+
+	def __str__(self):
+		return self.user.username
 
 class Teacher(models.Model):
 	user = models.OneToOneField(User, on_delete = models.CASCADE)

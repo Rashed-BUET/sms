@@ -3,15 +3,17 @@ from .models import Student, Teacher
 from django.contrib.auth.models import User
 from django import forms
 from django.contrib.admin import widgets 
+from functools import partial
+DateInput = partial(forms.DateInput, {'class': 'datepicker'})
 
 
-
-class StudentForm(ModelForm):
+class StudentForm(forms.ModelForm):
 	class Meta:
 		model = Student
-		exclude = ['user']
+		exclude = []
 		widgets = {
-		            'date_of_birth': widgets.AdminDateWidget(),
+		            'date_of_birth': DateInput(),
+		            'user': forms.HiddenInput(),
 		        }
 
 
@@ -33,7 +35,9 @@ class UserForm(ModelForm):
 
 
 
-
+class StudentLoginForm(forms.Form):
+	username = forms.CharField()
+	password = forms.CharField(widget=forms.PasswordInput)
 
 
 

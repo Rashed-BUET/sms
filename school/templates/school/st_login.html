@@ -6,15 +6,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('.datepicker').datepicker();
-});
-</script>
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"> 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
 {% load static %}
 
@@ -22,11 +14,12 @@ $(document).ready(function() {
 
   <div class="panel panel-primary div1">
 
- 	<div class="panel-heading">Student SignUp</div>
+ 	<div class="panel-heading">Login</div>
+
 	<form action="" method="post" enctype="multipart/form-data">
 	    {% csrf_token %}
 	    {{ us_form.as_p }}
-	    {{ st_form.as_p }}
 	    <input type="submit" value="Submit" />
 	</form>
-</div>
+
+  </div>
